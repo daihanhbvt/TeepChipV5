@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href=".img/">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0"
+        nonce="ePlrwQu3"></script>
+
+</head>
+
+<body>
+    <div class="app">
+        <!-- start header -->
+        <div class="header">
+            <div class="header__items">
+                <!-- start logo -->
+                <a href="" class="header__logo">
+                    <img src="img/teechip.svg" alt="" class="logo__img">
+                </a>
+                <!-- end logo -->
+
+                <!-- start search -->
+                <div class="search" id="css_search">
+                    <div class="header__icon" id="css_search_icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="search__transform" id="change_color_search">
+                        <div class="search__transform-item">
+                            <div class="search__placeholder" id="zoom_placeholder">
+                                What are you looking for?
+                            </div>
+                        </div>
+                        <div class="search__input">
+                            <input type="text" class="search__transform--input" id="text_input"
+                                onclick="toggle_visibility();" value="">
+                            <div class="search__input__line" id="input_line_bottom"></div>
+                        </div>
+                        <div class="search__btn-close" id="btn_close_to_del" onclick="close_to_del();">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <!-- start popular searches -->
+                    <div class="search__input-show" id="search_list">
+                        <div class="search__input-show-list">
+                            <div class="search__popular">
+                                Popular Searches
+                            </div>
+                            <div class="search__popular-item">
+                                Family & Relationships
+                            </div>
+                            <div class="search__popular-item">
+                                Animals
+                            </div>
+                            <div class="search__popular-item">
+                                Jobs
+                            </div>
+                            <div class="search__popular-item">
+                                Places
+                            </div>
+                            <div class="search__popular-item search__popular-item--no-border">
+                                Holidays
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end popular searches -->
+
+                    <!-- create modal click anywhere to close search list -->
+                    <div class="close-search-list" id="close_search_list">
+                    </div>
+
+                </div>
+                <!-- end search -->
+
+                <!-- start login -->
+                <a href="" class="login">
+                    <div class="header__icon" onclick="click_to_login(); return false;">
+                        <i class="fas fa-user-circle"></i>
+                        <p class="header__login-text">
+                            Login / Sign Up
+                        </p>
+                    </div>
+                </a>
+                <!-- end login -->
+
+                <!-- start cart -->
+                <a href="" class="cart">
+                    <div class="header__icon">
+                        <i class="fa fa-shopping-cart"></i>
+                    </div>
+                </a>
+                <!-- end cart -->
+
+                <!-- start menu -->
+                <div class="menu">
+                    <div class="menu-item">
+                        <a href="#"></a>Men</Log>
+                        <div class="menu-men">
+                            <div class="menu-men-item">
+                                <a href=""> <b>T-Shirts</b></a>
+                                <a href="">Classic Tees</a>
+                                <a href="">V-Neck Shirts</a>
+                                <a href="">Premium Fitted Tees</a>
+                                <a href="">All Over Unisex Shirts</a>
+                                <a href="">Classic Polo</a>
+                            </div>
+                            <div class="menu-men-item">
+                                <a href=""> <b>Long Sleeves</b></a>
+                                <a href="">Lightweight Jacket</a>
+                                <a href="">Dress shirt</a>
+                            </div>
+                            <div class="menu-men-item">
+                                <a href=""> <b>Tank Tops</b></a>
+                                <a href="">Unisex Tanks</a>
+                                <a href="">All Over Unisex Tanks</a>
+                            </div>
+                            <div class="menu-men-item">
+                                <a href=""> <b>Footwear</b></a>
+                                <a href="">Socks</a>
+                                <a href="">Men's Shoes</a>
+                            </div>
+                            <div class="menu-men-item">
+                                <a href=""> <b>Hoodies</b></a>
+                            </div>
+                            <div class="menu-men-item">
+                                <a href=""> <b>Sweatshirts</b></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#"></a>Women</a>
+                        <div class="menu-women">
+                            <div class="menu-men-item">
+                                <a href=""> <b>T-Shirts</b></a>
+                                <a href="">Ladies Tees</a>
+                                <a href="">Premium Fitted Ladies Tees</a>
+                                <a href="">All Over Unisex Shirts</a>
+                            </div>
+                            <div class="menu-men-item">
+                                <a href=""> <b>Tank Tops</b></a>
+                                <a href="">Unisex Tanks</a>
+                                <a href="">All Over Unisex Tanks</a>
+                            </div>
+                            <div class="menu-men-item">
+                                <a href=""> <b>Footwear</b></a>
+                                <a href="">Socks</a>
+                                <a href="">Women's Shoes</a>
+                            </div>
+                            <div class="menu-men-item">
+                                <a href=""> <b>Long Sleeves</b></a>
+                                <a href=""> <b>Hoodies</b></a>
+                                <a href=""> <b>Sweatshirts</b></a>
+                            </div>
+                            <div class="menu-men-item">
+                                <a href=""> <b>Dresses</b></a>
+                                <a href=""> <b>Long Sleeves</b></a>
+                                <a href=""> <b>Leggings</b></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#"></a>Youth & Baby</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#"></a>Home & Living</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#"></a>Accessories</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#"></a>Jewelry</a>
+                    </div>
+                </div>
+                <!-- end menu -->
+
+            </div>
+            <!-- start shopper login -->
+            <div class="shopper-login" id="shopper_login">
+                <div class="shopper-login__item">
+                    <div class="shopper-login__btn-close">
+                        <i class="fas fa-times" onclick="click_to_close();"></i>
+                    </div>
+                    <div class="shopper-login__form">
+                        <h1 class="shopper-login__form__heading">
+                            Shopper Log In
+                        </h1>
+                        <div class="shopper-login__form__seller">
+                            <p class="seller-login">Log into your seller account?</p>
+                            <a href="" class="seller-click">Click here</a>
+                        </div>
+                        <p class="shopper-login__advantage">
+                            Take advantage of the features and benefits that make shopping with TeeChip faster and
+                            easier.
+                        </p>
+                        <button class="shopper-login-btn">
+                            <a href="">Log In</a>
+                        </button>
+                        <button class="shopper-signup-btn">
+                            <a href="">Sign Up</a>
+                        </button>
+                        <div class="text-divider">
+                            <div class="text-divider-line">
+
+                            </div>
+                            <p class="text-divider__continue">
+                                or continue width
+                            </p>
+                        </div>
+
+                        <!-- <button class="shopper-login-facebook-btn">
+                                    <div class="shopper-login-facebook-btn__icon">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                    <a href="">Facebook</a>
+                                </button> -->
+                        <button class="shopper-login-facebook-btn">
+                            <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with"
+                                data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                        </button>
+                        <div class="shopper-login__policy">
+                            By creating an account, you agree to TeeChip's
+                            <a href="" class="shopper-login__term">Terms of Use </a> and
+                            <a href="" class="shopper-login__term">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end shopper login -->
+
+        </div>
+        <!-- end header -->
+
+
+        <!-- Slideshow -->
+
+        <div class="homepage">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <!-- <div class="numbertext">1 / 3</div> -->
+                    <img src="img/baner1.jpeg" style="width:100%">
+                    <!-- <div class="text">Caption Text</div> -->
+                </div>
+
+                <div class="mySlides fade">
+                    <!-- <div class="numbertext">2 / 3</div> -->
+                    <img src="img/baner2.jpg" style="width:100%">
+                    <!-- <div class="text">Caption Two</div> -->
+                </div>
+
+                <div class="mySlides fade">
+                    <!-- <div class="numbertext">3 / 3</div> -->
+                    <img src="img/baner3.jpg" style="width:100%">
+                    <!-- <div class="text">Caption Three</div> -->
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="dot-item">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
+            </div>
+            <!-- end slideshow -->
+
+            <!-- start category -->
+            <div class="category">
+                <div class="category__text">
+                    <h3>Featured Category </h3>
+                </div>
+                <div class="category__list">
+                    <div class="category__item"></div>
+                    <div class="category__item"></div>
+                    <div class="category__item"></div>
+                    <div class="category__item"></div>
+                    <div class="category__item"></div>
+                    <div class="category__item"></div>
+                </div>
+            </div>
+            <!-- end category -->
+
+            <!-- start product recommended -->
+            <div class="product-recommended">
+                <div class="product-recommended__text">
+                    <h3>Recommended For You</h3>
+                </div>
+                <div class="product-recommended__list">
+                    <div class="product-recommended__item">
+                        <div class="product-recommended__img"></div>
+                        <div class="product-recommended__desc">
+                            <div class="product-recommended__name">
+                                LIMITED EDITION
+                            </div>
+                            <div class="product-recommended__price">
+                                643.399 đ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-recommended__item"></div>
+                    <div class="product-recommended__item"></div>
+                    <div class="product-recommended__item"></div>
+
+                </div>
+            </div>
+            <!-- end product recommended -->
+
+            <!-- start featured-collection -->
+            <div class="featured-collection">
+                <div class="featured-collection__banner"></div>
+                <div class="featured-collection__list">
+                    <div class="featured-collection__item"></div>
+                    <div class="featured-collection__item"></div>
+                    <div class="featured-collection__item"></div>
+                    <div class="featured-collection__item"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <!-- scroll -->
+    <div class="btn-scroll">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </div>
+    <!-- end scroll -->
+    <div class="container">
+
+        <div class="footer">
+            <div class="footer__logo">
+                <img src="img/teechip.svg" alt="">
+            </div>
+
+            <div class="footer__list">
+                <div class="footer__list-item">
+                    <div class="footer__service">
+                        <div class="footer__title">
+                            Service
+                        </div>
+                        <div class="footer__item">
+                            <a href="">About us</a>
+                            <a href="">Track order</a>
+                            <a href="">Track order</a>
+                            <a href="">Track order</a>
+                            <a href="">FAQ</a>
+                            <a href="">Service</a>
+                            <a href="">Service</a>
+                            <a href="">Service</a>
+                        </div>
+                    </div>
+                    <div class="footer__company">
+                        <div class="footer__title">
+                            Company
+                        </div>
+                        <div class="footer__item">
+                            <a href="">About us</a>
+                            <a href="">Track order</a>
+                            <a href="">Track order</a>
+                            <a href="">Track order</a>
+                            <a href="">FAQ</a>
+                            <a href="">Service</a>
+                            <a href="">Service</a>
+                            <a href="">Service</a>
+                        </div>
+                    </div>
+                    <div class="footer__need-help">
+                        <div class="footer__title">
+                            Need help
+                        </div>
+                        <div class="footer__item">
+                            <a href="">About us</a>
+                            <a href="">Track order</a>
+                            <a href="">Track order</a>
+                            <a href="">Track order</a>
+                            <a href="">FAQ</a>
+                            <a href="">Service</a>
+                            <a href="">Service</a>
+                            <a href="">Service</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="footer__payment">
+                    <div class="footer__title">
+                        Need help
+                    </div>
+                    <div class="footer__item">
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
