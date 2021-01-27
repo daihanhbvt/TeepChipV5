@@ -793,9 +793,6 @@ body {
   width: 232px;
   height: 50px;
 }
-/* .footer__select option {
-  padding: 12px 8px 12px 12px;
-} */
-#language {
+.footer__select-item {
   padding: 12px 8px 12px 12px;
 }
