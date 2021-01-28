@@ -50,15 +50,27 @@ function close_to_del() {
 
 //click login/signup to open form login
 function click_to_login() {
+  var close_click = document.getElementById("close_login");
+  close_click.style.display = "block";
   shopper_login.style.display = "flex";
+
   /*Display none search list when click login/signup */
   search_list.style.display = "none";
 }
 
 //click icon x (close) to close form shopper_login/signup
 function click_to_close() {
+  var close_click = document.getElementById("close_login");
   shopper_login.style.display = "none";
+  close_click.style.display = "none";
 }
+
+// window.addEventListener("click", function (e) {
+//   const select = document.querySelector(".shopper-login");
+//   if (!select.contains(e.target)) {
+//     shopper_login.style.display = "none";
+//   }
+// });
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
@@ -89,7 +101,7 @@ window.onclick = function (event) {
     } else {
       zoom_placeholder.style.transform = "translateY(+.75rem)";
       zoom_placeholder.style.fontSize = "1rem";
-       btn_close_to_del.style.display = "none";
+      btn_close_to_del.style.display = "none";
 
       text_input.value = ""; //delete whitespace to mouse pointer returns to the first position
     }
@@ -219,4 +231,3 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
