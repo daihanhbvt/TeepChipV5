@@ -89,6 +89,7 @@ window.onclick = function (event) {
     } else {
       zoom_placeholder.style.transform = "translateY(+.75rem)";
       zoom_placeholder.style.fontSize = "1rem";
+       btn_close_to_del.style.display = "none";
 
       text_input.value = ""; //delete whitespace to mouse pointer returns to the first position
     }
@@ -218,3 +219,4 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
