@@ -9,12 +9,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="product-style.css">
-    <link rel="stylesheet" href="">
+    <!-- <link rel="stylesheet" href=".product/img"> -->
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0"
-        nonce="ePlrwQu3"></script>
+    <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0"
+        nonce="ePlrwQu3"></script> -->
+
+
+
 
 </head>
 
@@ -190,7 +193,7 @@
 
             <!-- start shopper login -->
 
-            <div class="shopper-lg">
+            <!-- <div class="shopper-lg">
                 <div class="close-login" id="close_login" onclick="click_to_close();"></div>
 
                 <div class="shopper-login" id="shopper_login">
@@ -225,13 +228,6 @@
                                     or continue width
                                 </p>
                             </div>
-
-                            <!-- <button class="shopper-login-facebook-btn">
-                                    <div class="shopper-login-facebook-btn__icon">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </div>
-                                    <a href="">Facebook</a>
-                                </button> -->
                             <button class="shopper-login-facebook-btn">
                                 <div class="fb-login-button" data-width="" data-size="large"
                                     data-button-type="login_with" data-layout="default" data-auto-logout-link="false"
@@ -246,7 +242,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> -->
             <!-- end shopper login -->
 
         </div>
@@ -254,13 +250,136 @@
 
         <!-- Slideshow -->
 
-        <div class="product-detail">
-            <div class="product-detail__item">
-                <div class="product-detail__thumb"></div>
-                <div class="produc-detail__zoom"></div>
+        <div class="product">
+            <div class="product-name">
+                <a href="">Home > XOXO</a>
             </div>
-            <div class="product-detail__item">
-                <div class="image-zoom"></div>
+            <div class="product-detail">
+                <div class="product-detail__image">
+                    <div class="product-detail__thumb">
+                        <img src="img/thumb.jpg" alt="">
+                        <img src="img/thumb (1).jpg" alt="">
+                    </div>
+                    <div class="product-detail__zoom">
+                        <div class="zoom-pages">
+                            <span> 1/2</span>
+                        </div>
+                        <div class="img-zoom-container">
+                            <img id="myimage" src="img/regular.jpg" width="584px" height="730px">
+                            <div id="myresult" class="img-zoom-result"></div>
+                        </div>
+
+                        <!-- <div class="zoom-image">
+                            <img src="img/regular.jpg" alt="">
+                        </div> -->
+                    </div>
+                </div>
+                <div class="product-detail__list">
+                    <div class="product__name">
+                        <span>XOXO Long Sleeve Tee</span>
+                    </div>
+                    <div class="product__rated">
+                        <div class="product__rated-icon">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span> 4.5</span>
+
+                    </div>
+                    <div class="price">
+                        <h1> 576.589 đ</h1>
+                    </div>
+                    <div class="product__select">
+                        <div class="product-select__header">
+                            <b> Product:</b> Long Sleeve Tee
+                        </div>
+                        <div class="product-select__list">
+                            <div class="product-select__item">
+                                <img src="img/thumb (2).jpg" alt="">
+                            </div>
+                            <div class="product-select__item">
+                                <img src="img/thumb (1).jpg" alt="">
+                            </div>
+                            <div class="product-select__item">
+                                <img src="img/thumb.jpg" alt="">
+                            </div>
+                            <div class="product-select__item">
+                                <img src="img/thumb (2).jpg" alt="">
+                            </div>
+                            <div class="product-select__item">
+                                <img src="img/thumb (2).jpg" alt="">
+                            </div>
+                            <div class="product-select__item">
+                                <img src="img/thumb (1).jpg" alt="">
+                            </div>
+                            <div class="product-select__item">
+                                <img src="img/thumb.jpg" alt="">
+                            </div>
+                            <div class="product-select__item">
+                                <img src="img/thumb (2).jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="product-select__color">
+                            <div class="product-select__text-color">
+                                <span>Color: Black</span>
+                            </div>
+                            <div class="product-select__icon-color">
+                                <div class="product-select__icon">
+                                    <div class=" icon-color__black"></div>
+                                </div>
+                                <div class="product-select__icon ">
+                                    <div class="icon-color__darkblue"></div>
+                                </div>
+                                <div class="product-select__icon ">
+                                    <div class="icon-color__asphalt"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-select__size">
+                            <div class="product-select-size__text">
+                                <div class="product-select__text">
+                                    <span>Size: M</span>
+                                </div>
+                                <div class="text-detail">
+                                    <a href="">Size Guide</a>
+                                </div>
+                            </div>
+                            <div class="product-select-size__list">
+                                <div class="product-select-size__item ">
+                                    <a href=""> S </a>
+                                </div>
+                                <div class="product-select-size__item ">
+                                    <a href=""> M </a>
+                                </div>
+                                <div class="product-select-size__item ">
+                                    <a href=""> L </a>
+                                </div>
+                                <div class="product-select-size__item ">
+                                    <a href=""> XL </a>
+                                </div>
+                                <div class="product-select-size__item ">
+                                    <a href=""> S </a>
+                                </div>
+                                <div class="product-select-size__item ">
+                                    <a href=""> S </a>
+                                </div>
+                                <div class="product-select-size__item ">
+                                    <a href=""> S </a>
+                                </div>
+                                <div class="product-select-size__item ">
+                                    <a href=""> S </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -504,6 +623,12 @@
     </div>
     <!-- ok -->
     <script src="product-app.js"></script>
+    <script src="zoom-img.js"> </script>
+    <!-- <script>
+        imageZoom("myimage", "myresult");
+    </script> -->
+
+
 </body>
 
 </html>
