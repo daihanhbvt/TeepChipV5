@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Đại Hạnh V5</title>
     <link rel="stylesheet" href="product-style.css">
     <!-- <link rel="stylesheet" href=".product/img"> -->
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
@@ -22,6 +22,9 @@
 </head>
 
 <body>
+
+    <!-- <img src="img/black.jpg" alt="">aaaaa -->
+
     <div class="app">
         <!-- start header -->
         <div class="header">
@@ -256,16 +259,20 @@
             </div>
             <div class="product-detail">
                 <div class="product-detail__image">
-                    <div class="product-detail__thumb">
-                        <img src="img/thumb.jpg" alt="">
-                        <img src="img/thumb (1).jpg" alt="">
+                    <div class="product-detail__item">
+                        <!-- <div class="product-detail__thumb product-detail__thumb-before">
+                            <img src="img/black1.jpg" alt="">
+                        </div>
+                        <div class="product-detail__thumb product-detail__thumb-after">
+                            <img src="img/black2.jpg" alt="">
+                        </div> -->
                     </div>
                     <div class="product-detail__zoom">
                         <div class="zoom-pages">
                             <span> 1/2</span>
                         </div>
                         <div class="img-zoom-container">
-                            <img id="myimage" src="img/regular.jpg" width="584px" height="730px">
+                            <img id="myimage" src="img/black.jpg" width="584px" height="730px">
                             <div id="myresult" class="img-zoom-result"></div>
                         </div>
 
@@ -276,7 +283,7 @@
                 </div>
                 <div class="product-detail__list">
                     <div class="product__name">
-                        <span>XOXO Long Sleeve Tee</span>
+                        <span>XOXO </span> <span id="productnameId"></span>
                     </div>
                     <div class="product__rated">
                         <div class="product__rated-icon">
@@ -290,17 +297,14 @@
 
                     </div>
                     <div class="price">
-                        <h1> 576.589 đ</h1>
+                        <h1 class="priceid"> 576.589 đ</h1>
                     </div>
-                    <div class="product__select">
+                    <div class="product__select" id="productselect">
                         <div class="product-select__header">
-                            <b> Product:</b> Long Sleeve Tee
+                            <b> Product:</b> <span> Long Sleeve Tee</span>
                         </div>
-                        <div class="product-select__list">
-                            <div class="product-select__item">
-                                <img src="img/thumb (2).jpg" alt="">
-                            </div>
-                            <div class="product-select__item">
+                        <div class="product-select__list" id="productListId">
+                            <!-- <div class="product-select__item">
                                 <img src="img/thumb (1).jpg" alt="">
                             </div>
                             <div class="product-select__item">
@@ -320,22 +324,28 @@
                             </div>
                             <div class="product-select__item">
                                 <img src="img/thumb (2).jpg" alt="">
-                            </div>
+                            </div> -->
                         </div>
                         <div class="product-select__color">
                             <div class="product-select__text-color">
-                                <span>Color: Black</span>
+                                <span>Color:<span id="productColorId"></span></span>
                             </div>
                             <div class="product-select__icon-color">
-                                <div class="product-select__icon">
-                                    <div class=" icon-color__black"></div>
+                                <!-- <div class="product-select__icon">
+                                    <div class=" icon-color__black">
+                                        <span></span>
+                                    </div>
                                 </div>
                                 <div class="product-select__icon ">
-                                    <div class="icon-color__darkblue"></div>
+                                    <div class="icon-color__darkblue">
+                                        <span></span>
+                                    </div>
                                 </div>
                                 <div class="product-select__icon ">
-                                    <div class="icon-color__asphalt"></div>
-                                </div>
+                                    <div class="icon-color__asphalt">
+                                        <span> </span>
+                                    </div>
+                                </div> -->
                             </div>
                         </div>
 
@@ -619,11 +629,13 @@
             </div>
         </div>
     </div>
+
     <!-- end back-to-top button -->
     </div>
     <!-- ok -->
     <script src="product-app.js"></script>
     <script src="zoom-img.js"> </script>
+    <script src="datadetail.js"></script>
     <!-- <script>
         imageZoom("myimage", "myresult");
     </script> -->

@@ -260,12 +260,6 @@ for (const a of document.querySelectorAll(".custom-option")) {
   });
 }
 
-// window.addEventListener("click", function (e) {
-//   const b = document.querySelector(".select-box");
-//   if (!b.contains(e.target)) {
-//     b.classList.remove("open");
-//   }
-// });
 window.addEventListener("click", function (e) {
   for (const select of document.querySelectorAll(".select-box")) {
     if (!select.contains(e.target)) {
@@ -273,3 +267,20 @@ window.addEventListener("click", function (e) {
     }
   }
 });
+// window.addEventListener("click", function (e) {
+//   const b = document.querySelector(".select-box");
+//   if (!b.contains(e.target)) {
+//     b.classList.remove("open");
+//   }
+// });
+
+// Add active class to the current button (highlight it)
+// var header = document.getElementsByClassName("product-select__icon-color");
+// var btns = header.getElementsByClassName("product-select__icon");
+// for (var i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener("click", function () {
+//     var current = document.getElementsByClassName("active");
+//     current[0].className = current[0].className.replace(" active", "");
+//     this.className += " active";
+//   });
+// }

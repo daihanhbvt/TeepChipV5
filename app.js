@@ -29,7 +29,10 @@ function toggle_visibility() {
   change_color_search.style.color = "#FC6514";
 
   input_line_bottom.style.display = "block";
-  // btn_close_to_del.style.display="flex";
+  text_input.oninput = function (e) {
+    btn_close_to_del.style.display = "flex";
+  };
+
   // var a=document.querySelector("input").value;
   // console.log(a);
 }
@@ -46,6 +49,11 @@ newFunction();
 function close_to_del() {
   text_input.value = "";
   toggle_visibility(); //put mouse point input search
+  if (text_input.value != "") {
+    btn_close_to_del.style.display = "flex";
+  } else {
+    btn_close_to_del.style.display = "none";
+  }
 }
 
 //click login/signup to open form login
@@ -109,85 +117,85 @@ window.onclick = function (event) {
 };
 
 // LOGIN FACEBOOK
-function statusChangeCallback(response) {
-  // Called with the results from FB.getLoginStatus().
-  console.log("statusChangeCallback");
-  console.log(response); // The current login status of the person.
-  if (response.status === "connected") {
-    // Logged into your webpage and Facebook.
-    testAPI();
-  } else {
-    // Not logged into your webpage or we are unable to tell.
-    document.getElementById("status").innerHTML =
-      "Please log " + "into this webpage.";
-  }
-}
+// function statusChangeCallback(response) {
+//   // Called with the results from FB.getLoginStatus().
+//   console.log("statusChangeCallback");
+//   console.log(response); // The current login status of the person.
+//   if (response.status === "connected") {
+//     // Logged into your webpage and Facebook.
+//     testAPI();
+//   } else {
+//     // Not logged into your webpage or we are unable to tell.
+//     document.getElementById("status").innerHTML =
+//       "Please log " + "into this webpage.";
+//   }
+// }
 
-function checkLoginState() {
-  // Called when a person is finished with the Login Button.
-  FB.getLoginStatus(function (response) {
-    // See the onlogin handler
-    statusChangeCallback(response);
-  });
-}
+// function checkLoginState() {
+//   // Called when a person is finished with the Login Button.
+//   FB.getLoginStatus(function (response) {
+//     // See the onlogin handler
+//     statusChangeCallback(response);
+//   });
+// }
 
-window.fbAsyncInit = function () {
-  FB.init({
-    appId: "348954673172738",
-    cookie: true, // Enable cookies to allow the server to access the session.
-    xfbml: true, // Parse social plugins on this webpage.
-    version: "v3.2", // Use this Graph API version for this call.
-  });
+// window.fbAsyncInit = function () {
+//   FB.init({
+//     appId: "348954673172738",
+//     cookie: true, // Enable cookies to allow the server to access the session.
+//     xfbml: true, // Parse social plugins on this webpage.
+//     version: "v3.2", // Use this Graph API version for this call.
+//   });
 
-  FB.getLoginStatus(function (response) {
-    // Called after the JS SDK has been initialized.
-    statusChangeCallback(response); // Returns the login status.
-  });
-};
+//   FB.getLoginStatus(function (response) {
+//     // Called after the JS SDK has been initialized.
+//     statusChangeCallback(response); // Returns the login status.
+//   });
+// };
 
-function testAPI() {
-  // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-  console.log("Welcome!  Fetching your information.... ");
-  FB.api("/me", function (response) {
-    console.log("Successful login for: " + response.name);
-    document.getElementById("status").innerHTML =
-      "Thanks for logging in, " + response.name + "!";
-  });
-}
-function fb_login() {
-  FB.login(
-    function (response) {
-      if (response.authResponse) {
-        console.log("Welcome!  Fetching your information.... ");
-        //console.log(response); // dump complete info
-        access_token = response.authResponse.accessToken; //get access token
-        user_id = response.authResponse.userID; //get FB UID
+// function testAPI() {
+//   // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+//   console.log("Welcome!  Fetching your information.... ");
+//   FB.api("/me", function (response) {
+//     console.log("Successful login for: " + response.name);
+//     document.getElementById("status").innerHTML =
+//       "Thanks for logging in, " + response.name + "!";
+//   });
+// }
+// function fb_login() {
+//   FB.login(
+//     function (response) {
+//       if (response.authResponse) {
+//         console.log("Welcome!  Fetching your information.... ");
+//         //console.log(response); // dump complete info
+//         access_token = response.authResponse.accessToken; //get access token
+//         user_id = response.authResponse.userID; //get FB UID
 
-        FB.api("/me", function (response) {
-          user_email = response.email; //get user email
-          // you can store this data into your database
-        });
-      } else {
-        //user hit cancel button
-        console.log("User cancelled login or did not fully authorize.");
-      }
-    },
-    {
-      scope: "public_profile,email",
-    }
-  );
-  document.getElementById("login").addEventListener(
-    "click",
-    function () {
-      //do the login
-      FB.login(statusChangeCallback, {
-        scope: "email,public_profile",
-        return_scopes: true,
-      });
-    },
-    false
-  );
-}
+//         FB.api("/me", function (response) {
+//           user_email = response.email; //get user email
+//           // you can store this data into your database
+//         });
+//       } else {
+//         //user hit cancel button
+//         console.log("User cancelled login or did not fully authorize.");
+//       }
+//     },
+//     {
+//       scope: "public_profile,email",
+//     }
+//   );
+//   document.getElementById("login").addEventListener(
+//     "click",
+//     function () {
+//       //do the login
+//       FB.login(statusChangeCallback, {
+//         scope: "email,public_profile",
+//         return_scopes: true,
+//       });
+//     },
+//     false
+//   );
+// }
 
 // slideshow
 var slideIndex = 1;
